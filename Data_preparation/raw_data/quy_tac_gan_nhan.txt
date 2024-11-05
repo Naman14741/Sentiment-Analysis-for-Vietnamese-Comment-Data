@@ -1,0 +1,15 @@
+I. Quy tắc gán nhãn
+    1: tích cực
+    0: trung lập
+    -1: ditmemay
+
+II. Chia gán nhãn
+    Nam: 0 - 1k
+    Hiếu: 1k - 2k
+    Kiên: 2k-7k
+
+III. Gán nhãn xong
+    1. Gán nhãn đến đâu commit "x-y" rồi push lên đến đấy:
+        x: đoạn mình bắt đầu gán
+        y: đoạn mình gán nhãn đến
+    2. Có ý kiến gì thì sửa file này.
