@@ -130,6 +130,9 @@ class Transform:
     def _remove_abbreviations(self):
         pass
 
+    def _comment_length(self):
+        pass
+
     def process(self):
         self._remove_punctuation()
         self._lowercase()
