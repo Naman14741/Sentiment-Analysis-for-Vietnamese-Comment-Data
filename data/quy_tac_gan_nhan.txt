@@ -1,7 +1,7 @@
 I. Quy tắc gán nhãn
     1: tích cực
     0: trung lập
-    -1: ditmemay
+    -1: tiêu cực
 
 II. Chia gán nhãn
     Nam: 0 - 1k

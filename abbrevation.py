@@ -1,8 +1,4 @@
-import pandas as pd
-
-class Transform:
-
-    __dict__ = {
+dictionary = {
         'tmđt': 'thương mại điện tử',
         'tg': 'thế giới',
         'qg': 'quốc gia',
@@ -101,7 +97,7 @@ class Transform:
         'hcm': 'hồ chí minh',
         'đsct': 'đường sắt cao tốc',
         'metro': 'đường sắt đô thị',
-        'p/s': '',
+        'ps': '',
         'dnnn': 'doanh nghiệp nhà nước',
         'đhbk': 'đại học bách khoa',
         'dhbk': 'đại học bách khoa',
@@ -113,28 +109,3 @@ class Transform:
         'gtvt': 'giao thông vận tải',
 
     }
-
-    def __init__(self, csv_file):
-        self.csv_file = csv_file
-        self.df = pd.read_csv(self.csv_file)
-
-    # Loại bỏ dấu câu
-    def _remove_punctuation(self):
-        pass
-
-    # Loại bỏ chữ viết hoa
-    def _lowercase(self):
-        pass
-
-    # Loại bỏ từ viết tắt
-    def _remove_abbreviations(self):
-        pass
-
-    def _comment_length(self):
-        pass
-
-    def process(self):
-        self._remove_punctuation()
-        self._lowercase()
-        self._remove_abbreviations()
-        return self.df
