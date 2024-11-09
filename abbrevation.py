@@ -107,5 +107,9 @@ dictionary = {
         'plrtn': 'phân loại rác thải',
         'qđ': 'quy định',
         'gtvt': 'giao thông vận tải',
-
+        'ah': 'à',
+        'bro': 'bạn',
+        'kd': 'kinh doanh',
+        'tc': 'trước',
+        't': 'tôi'
     }
