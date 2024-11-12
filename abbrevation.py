@@ -1,4 +1,4 @@
-dictionary = {
+Dictionary = {
         'tmđt': 'thương mại điện tử',
         'tg': 'thế giới',
         'qg': 'quốc gia',
