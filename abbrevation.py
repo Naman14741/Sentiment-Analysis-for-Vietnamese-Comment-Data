@@ -111,5 +111,6 @@ Dictionary = {
         'bro': 'bạn',
         'kd': 'kinh doanh',
         'tc': 'trước',
-        't': 'tôi'
+        't': 'tôi',
+        'bth': 'bình thường'
     }

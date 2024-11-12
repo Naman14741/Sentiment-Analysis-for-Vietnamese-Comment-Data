@@ -39,6 +39,15 @@ class PreProcessing:
         self.comment = re.sub(r'(\d+)tr(\d)\b', r'\1 triệu \2 trăm nghìn', self.comment)
         return self
 
+    def remove_stopwords(self):
+        try:
+            with open("data/vietnamese-stopwords.txt", encoding="utf-8") as f:
+                stopwords = set(f.read().splitlines())  # Đưa vào set để tối ưu hóa
+            self.comment = ' '.join([word for word in self.comment.split() if word not in stopwords])
+        except FileNotFoundError:
+            print("Error: File 'vietnamese-stopwords.txt' not found.")
+        return self
+
     def remove_duplicate_characters(self):
         self.comment = re.sub(r'([a-zA-Zàáâãèéêìíòóôõùúăđĩũơưạảấầẩẫậắằẳẵặẹẻẽềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ])\1+', lambda m: m.group(1), self.comment)
         return self
@@ -67,5 +76,7 @@ class PreProcessing:
             .remove_punctuation() \
             .remove_duplicate_words() \
             .remove_duplicate_spaces() \
-            .tokenize()
+            .tokenize() \
+            .remove_stopwords()
+
         return self.comment
