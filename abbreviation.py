@@ -112,5 +112,11 @@ Dictionary = {
         'kd': 'kinh doanh',
         'tc': 'trước',
         't': 'tôi',
-        'bth': 'bình thường'
+        'bth': 'bình thường',
+        'b': 'bạn',
+        'xs': 'xổ số',
+        'xskt': 'xổ số kiến thiết',
+        'ktế': 'kinh tế',
+        'thgian': 'thời gian',
+        'khmt': 'khoa học máy tính'
     }

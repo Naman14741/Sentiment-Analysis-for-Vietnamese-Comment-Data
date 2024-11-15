@@ -1,6 +1,6 @@
 import re
 from pyvi import ViTokenizer
-from abbrevation import Dictionary
+from abbreviation import Dictionary
 
 
 def Test():
@@ -23,10 +23,12 @@ class PreProcessing:
         self.comment = self.comment.lower()
         return self
 
+    # Lỗi
     def abbreviation_processing(self):
-        for word in self.comment.split():
+        words = self.comment.split(" ")
+        for word in words:
             if word in Dictionary.keys():
-                self.comment = self.comment.replace(word, Dictionary[word])
+                self.comment = re.sub(rf'\b{re.escape(word)}\b', Dictionary[word], self.comment)
         return self
 
     def money_and_time_processing(self):
@@ -69,14 +71,16 @@ class PreProcessing:
         return self
 
     def process(self):
-        self.lowercase() \
+        self.remove_icon() \
+            .lowercase() \
             .abbreviation_processing() \
             .money_and_time_processing() \
             .remove_duplicate_characters() \
-            .remove_punctuation() \
             .remove_duplicate_words() \
-            .remove_duplicate_spaces() \
             .tokenize() \
-            .remove_stopwords()
+            .remove_punctuation() \
+            .remove_duplicate_spaces()
 
         return self.comment
+
+Test()
