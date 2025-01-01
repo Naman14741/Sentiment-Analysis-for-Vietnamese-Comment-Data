@@ -5,7 +5,7 @@ from abbreviation import Dictionary
 def Test():
     text = input()
     pre_processing = PreProcessing(text)
-    processed_comment = pre_processing.process()
+    processed_comment = pre_processing.norm()
     print(processed_comment)
 
 
